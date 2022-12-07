@@ -45,9 +45,7 @@ class HomeViewModel @Inject constructor(private val repository: Repository) : Vi
 
     fun updateFavoriteTourism(id: Int, isFavorite: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.apply {
-                updateFavoriteTourism(id, isFavorite)
-            }
+            repository.updateFavoriteTourism(id, isFavorite)
         }
     }
 

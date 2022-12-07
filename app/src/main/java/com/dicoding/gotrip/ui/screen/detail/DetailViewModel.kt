@@ -28,9 +28,7 @@ class DetailViewModel @Inject constructor(private val repository: Repository) : 
 
     fun updateFavoriteTourism(id: Int, isFavorite: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.apply {
-                updateFavoriteTourism(id, isFavorite)
-            }
+            repository.updateFavoriteTourism(id, isFavorite)
         }
     }
 }
